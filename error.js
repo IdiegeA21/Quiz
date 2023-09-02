@@ -206,4 +206,4 @@ login.addEventListener("click", (e) => {
         
     }
 });
-// localStorage.clear();
+localStorage.clear();
