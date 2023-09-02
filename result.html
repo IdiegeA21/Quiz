@@ -233,7 +233,7 @@
       userName.textContent = user.name;
       id.textContent = user.userID;
       announce.textContent = `${scoreDetails.score}%`;
-      endTime.textContent = `Time spent: ${scoreDetails.time}`;
+      endTime.textContent = `Time left: ${scoreDetails.time}`;
       
       if (!localStorage.getItem("sent")) {
         console.log(false);
