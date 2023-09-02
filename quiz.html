@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Quiz</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+
+    
+    <div id="loadingScreen" class="d-flex justify-content-center">
+        <div class="spinner-border m-5" id="spinner" role="status" style="margin-top: 5rem;">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+
+    <div class="main-content" id="mainContent">
+        <main class="form-signin w-100 m-auto formContainer" id="login">
+            <form>      
+              <img class="mb-4" src="images/text-1691803116382.png" alt="Id-A-22" width="162" height="30">
+              <h1 class="h3 mb-3 fw-normal" style="font-weight: 700 !important;">Please sign in</h1>
+          
+              <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Name">
+                <label for="floatingInput">Name</label>
+              </div>
+              <div class="form-floating fadi">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <button id="viewToggler" class="viewpassword">
+                    <span class="material-symbols-outlined" id="posi">
+                        visibility  
+                    </span>
+                </button>
+                <label for="floatingPassword">Password</label>
+              </div>
+              <div class="form-check text-start my-3"id="form-check">
+                <span class="feedback" id="tellUser">
+                  **Password field is required
+                </span>
+              </div>
+              <button class="btn btn-primary w-100 py-2" id="subAction" type="submit">Sign in</button>
+              <p class="mt-5 mb-3 text-body-secondary">&copy; 2023 -- Id-A-22</p>
+            </form>
+        </main>
+
+        <div class="notAuser" id="notAuser">
+          <div id="loadingScreen2" class="d-flex justify-content-center">
+            <div class="spinner-border m-5" id="spinner" role="status" style="margin-top: 5rem;">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+          <div class="notContent" id="notaUserContent">
+            <div class="not-Info">
+              <div class="tyoer">
+                <h1 id="typewriter2"></h1>
+              <span class="cursor">|</span>
+              </div>
+              <h4>Don't worry, We got you</h4>
+              <p>Unlock the excitement by signing in as a guest and diving into this quiz version for a chance to seize incredible prizes!</p>
+            </div>
+            <div class="formContainer c-w100" id="sinform">
+              <form>
+                <img class="mb-4" src="images/text-1691803116382.png" alt="Id-A-22" width="160" height="30">
+                <h1 class="h3 mb-3 fw-normal" style="    font-weight: 700 !important;color: #000000;">
+                  Sign up as a quest
+                </h1>
+            
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="e.g - John" required>
+                  <label for="floatingInput">Name</label>
+                </div>
+                <div class="form-floating fadi">
+                  <input type="password" class="form-control" id="floatingPassword" placeholder="Set password" required>
+                  <button id="viewToggler" class="viewpassword">
+                      <span class="material-symbols-outlined" id="posi">
+                          visibility  
+                      </span>
+                  </button>
+                  <label for="floatingPassword">Password</label>
+                </div>
+                <div class="form-check text-start my-3" style="padding-left: 10%;">
+                  <input class="form-check-input" type="checkbox" value="Serious" id="flexCheckDefault">
+                  <label class="form-check-label" for="flexCheckDefault" style="color: #ff0000; font-weight: 600;">
+                    Click if you want to join the race
+                  </label>
+                </div>
+                <div class="form-check text-start my-3"id="form-check">
+                  <span class="feedback" id="tellUser">
+                    **Password field is required
+                  </span>
+                </div>
+                <button class="btn btn-primary w-100 py-2" id="subAction" type="submit">Sign in</button>
+                <p class="mt-5 mb-3 text-body-secondary">&copy; 2023 -- Id-A-22</p>
+              </form>
+            </div>
+          </div>
+        </div>
+    
+        <div class="aUser" id="aUser">
+          <div class="container">
+            <div class="position-relative p-5 text-center text-muted bg-body border border-dashed rounded-5">
+              <img class="bi mt-5 mb-3 sucImg" id="sucImg" src="images/text-1691803116382.png" alt="Id-A-22" width="100" height="20">
+              <h1 class="text-body-emphasis sucH1" id="sucH1"></h1>
+              <p class="col-lg-6 mx-auto mb-4 sucP" id="sucP">
+                Omohhh!! You're in for some interactive fun. Right below this section, you'll find the instructions for the upcoming quiz. 
+                Get ready to test your knowledge and enjoy the journey. Let's dive in and make this a memorable experience! 🌟.
+              </p>
+              &nbsp
+              <h4 class="instructions mb-5" id="sucIn">Instructions</h4>
+              <p style="margin: 2rem auto; text-align: justify;" id="sucinP">
+                Get ready for an engaging challenge! Our quiz is set to last for 20 minutes and consists of 30 thought-provoking questions. It's time to 
+                put your knowledge to the test and have some fun. Let's see how many questions you can conquer within the time limit. Ready, set, go! 🕒🧠🔥
+              </p>
+              <ul class="list-group list-group-flush" id="sucUl" class="sucUl">
+                <span>Time Limit:</span>
+                <li class="list-group-item">
+                   You have a total of 20 minutes to complete the quiz. Pace yourself and try to answer as many questions as you can within the given time.
+                </li>
+                <span>Questions:</span>
+                <li class="list-group-item"> 
+                  There are 30 questions in total. Read each question carefully and choose the best answer. Don't rush, but also keep an eye on the time.
+                </li>
+                <span>Navigation:</span>
+                <li class="list-group-item">
+                  Once you start the quiz, please stay within this tab or window. If you navigate away from the page, the quiz will automatically end, and your progress may be lost.
+                </li>
+                <span>Choose wisely:</span>
+                <li class="list-group-item">
+                  Read each question carefully and be sure of your answer before clicking "Next." Once you proceed to the next question, you won't have the chance to change your answer immediately. Take your time and choose your answer wisely
+                </li>
+                <span>Submit Answers: </span>
+                <li class="list-group-item">
+                  After you've answered all the questions or when your time is up, the quiz will automatically stop. You'll then have the opportunity to submit your answers.
+                </li>
+                <span>Results: </span>
+                <li class="list-group-item">
+                  Your score will be calculated based on the number of correct answers. Don't worry, even if you don't finish all the questions, your completed answers will still count towards your score.
+                </li>
+              </ul>
+              <p style="margin: 5rem auto; text-align: justify; ">Remember, the goal is to have fun while testing your knowledge. Are you ready to begin? 
+                Click "Start Quiz" to dive in and let the adventure begin! 🚀🧠
+              </p>
+              <button class="btn btn-primary px-5 mb-5 sucB" type="button">
+                Start Quiz
+              </button>
+            </div>
+          </div>
+        </div>
+    
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="info.js"></script>
+    <script src="error.js"></script>
+</body>
+
+</html>

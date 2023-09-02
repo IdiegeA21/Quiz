@@ -1,0 +1,75 @@
+.loading-screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+.acMain{
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 100vh;
+    align-content: center;
+    justify-content: center;
+    background: linear-gradient(rgb(53 54 77 / 50%), rgb(229 148 0 / 19%)), url("https://img.freepik.com/free-vector/hand-drawn-back-school-background_23-2149464866.jpg") no-repeat center center fixed;
+    background-size: cover;
+    padding: 0 1.4rem;
+}
+.time{
+    margin-bottom: 5rem;
+    padding: 8px 20px;
+    border-radius: 25px;
+    background-color: rgba(255, 4, 4, 0.253);
+}
+.q-number{
+    padding: 5px 9px;
+    background-color: rgba(255, 4, 4, 0.253);
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 25px;
+    line-height: 1.5;
+}
+.aciton{
+    display: none;
+    align-items: center; 
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.que{
+    margin: 0 auto 2rem;
+    font-weight: bold;
+}
+.que p{
+    color: #2b2222;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 18px;
+    margin-top: 1rem;
+}
+.uls {
+    width: 100%;
+}
+.kjd{
+    background-image: linear-gradient(rgba(145, 152, 158, 0.6), rgba(118, 132, 145, 0.5));
+    display: flex;
+    justify-content: space-between;
+}
+.me-1{
+    margin-right: 10px;
+}
+.form-check-label{
+    font-weight: bold;
+    padding-left: 6px;
+    width: 90%;
+    text-align: justify;
+}
+.btn {
+    margin-top: 2rem;
+}

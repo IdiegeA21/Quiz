@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lets Talk Chemistry</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+  <script>
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          document.getElementById("loadingScreen").style.display = "none";
+          document.getElementById("mainContent").style.display = "block"
+      
+          typeWriter();
+        }, 3500);
+      });
+  </script>
+   <div id="loadingScreen" class="loading-screen">
+      <img class="load-content" src="images/loading.webp" alt="loading">
+   </div>
+
+
+   
+   <div class="main-content" id="mainContent">
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img class="logo-img" src="images/text-1691891282991.png" alt="Our Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <div class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              <img class="logo-img" src="images/text-1691891282991.png" alt="Our Logo">
+            </div>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="quiz.html">Take Quiz</a>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+    <main class="welContent">
+      <div id="welcome" class="welcome">
+         <div id="typewriter" class="conwel3">
+          <h1></h1>
+          <span class="cursor">|</span>
+          <div class="incontent">
+            <h4>Enhance Your Path to Knowledge with Us</h4>
+            <p>"Don't lose sight of lessons during the pause – prepare for the quiz, enroll today, and put your knowledge to the test!"</p>
+            <!-- <p>During this extended pause, the last thing we want is to lose sight of the lessons we've learned. Are you prepared for the quiz? Enroll today and put your knowledge to the test!</p> -->
+            
+            <a href="quiz.html" class="cta-button">Start Quiz</a>
+          </div>
+         </div>
+         <script>
+          const textElement = document.querySelector('#typewriter h1');
+          const texts = [
+            "Hello Comrade",
+            "Welcome !!!",
+            "Your Journey to Knowledge Begins Here.",
+            "Embrace Learning and Exploration.",
+            "Unlock Your Potential with Us"
+          ];
+          let textIndex = 0;
+          let charIndex = 0;
+          let isDeleting = false;
+
+          function typeWriter() {
+            const currentText = texts[textIndex];
+
+            if (isDeleting) {
+              if(textIndex == texts.length - 1){
+                  setTimeout(() => {
+                    textElement.textContent = currentText.substring(0, charIndex - 1);
+                    charIndex--;
+                  }, 6000)
+              }else{
+                textElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+              }
+
+            } else {
+              textElement.textContent = currentText.substring(0, charIndex + 1);
+              charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentText.length) {
+              isDeleting = true;
+              setTimeout(typeWriter, 1500); // Delay before deleting text
+            } else if (isDeleting && charIndex === 0) {
+              isDeleting = false;
+              textIndex = (textIndex + 1) % texts.length;
+              setTimeout(typeWriter, 500); // Delay before typing new text
+            } else {
+              setTimeout(typeWriter, 100); // Adjust typing speed
+            }
+          }
+       </script>
+       <div class="custom-shape1-divider-top-1692126379">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+          </svg>
+       </div>
+      </div>
+      <div class="beforepg2">
+        <div class="bfpg2-header">
+          <h1>Stay Sharp: Test Your Knowledge with Our Quiz!</h1>
+        </div>
+        <div class="incontent bfpg2-content ">
+          <p>
+            During this extended pause, the last thing we want is to lose sight of the valuable lessons we've learned. 
+            Enroll today in our engaging and educational quiz program to put your knowledge to the test! Our thoughtfully designed quizzes cover a wide range of topics.
+            This courses include our general Chemistry and all the courses that we treated last semester, allowing you to reinforce what you've learned and discover new insights. 
+            Challenge yourself, stay mentally active, and continue your journey of growth. Join us in embracing continuous learning!
+          </p>
+        </div>
+        <a href="quiz.html" class="cta-button">Start Quiz</a>
+      </div>
+      <div class="pg2">
+        <div class="bfpg2-header incontent aaben">
+          <h1>Aim and benefit of this quiz</h1>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card">
+              <img src="https://wallpaper.dog/large/20497800.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Elevate Your Understanding</h5>
+                <p class="card-text">Enhance critical thinking and knowledge retention through this interactive quiz, expanding your comprehension of various subjects.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card s2nd">
+              <img src="https://images.unsplash.com/photo-1576506542790-51244b486a6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3R1ZHl8ZW58MHx8MHx8fDA%3D&w=1000&q=80" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Broadening subject comprehension.</h5>
+                <p class="card-text">Deepen your understanding across diverse topics and courses treated last semester, fostering a more holistic perspective of the matter around you.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="https://wallpapers.com/images/featured/study-pictures-6ovzato85a4dtczb.jpg" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Stay sharp during this pause</h5>
+                <p class="card-text">Maintain mental agility and continuous learning by participating in the quiz, enhancing your cognitive abilities and knowledge retention.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+       <div class="custom-shape-divider-bottom-1692061981">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
+      </div>
+      </div>
+      <div class="pg3" id="about">
+        <div class="ab-intro">
+          <h1>Our story</h1>
+        </div>
+        <div class="abItems">
+            <h3>Igniting mind Fueled by Matilda** </h3>
+            <div class="abBox">
+              <p>
+                In the heart of our journey lies the tale of Matilda, a visionary who recognized the importance of 
+                keeping our mind vibrant with the rythms of our last semester acedamics courses and general Chemistry
+                during the challenges of long-term industrial training. Matilda's belief
+                in the power of continuous learning led her to create a unique initiative that would bridge the gap between
+                classroom and real-world experience.
+                Guided by her determination and strategies to keep us close to our books, our platform was born. We are the embodiment of Matilda's vision –
+                a thriving community of knowledge seekers who refuse to let learning take a backseat. We are united by the
+                commitment to sharpen our minds, even during this extended pause.
+                we keep our minds ignited, grow stronger together, and never stop learning...
+              </p>
+              <div class="abAbout">
+                <div class="img">
+                  <img src="images/photo_matty.jpg" alt="Matilda">
+                </div>
+                <div class="himher">
+                  <h2>Schall Matilda</h2>
+                  <p>Student</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        &nbsp;
+        <div class="abItems">
+          <h3>Fueling Mind, Crafted by Id-A-22** </h3>
+          <div class="abBox">
+            <p>
+              Id-A-22's vision was to create a digital haven for intellectual growth for this long-term industrial training. 
+              Our website is a vibrant community that integrates learning and camaraderie. Through interactive quizzes and competitions,
+              colleagues can elevate their knowledge while navigating professional challenges and winnig prizes. Join us on this journey to celebrate learning,
+              excellence, and connections that transcend physical boundaries. 
+              Together, we honor Id-A-22's legacy by ensuring the flame of knowledge always burns bright, no matter where life takes us.  
+            </p>
+            <div class="abAbout">
+              <div class="img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSngDLxVdX-4fhpWyG8hDPxUWyGV1B9uOXJ3Q&usqp=CAU" alt="Id-A-22">
+              </div>
+              <div class="himher">
+                <h2>Id-A-22</h2>
+                <p>Student</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        &nbsp;
+        <div class="abItems" style="background-color: aliceblue; margin: 2rem 0;">
+          <h3 style="padding: 2rem 0;">Sponsors' Impact: Verified, and Matilda** </h3>
+          <div class="abBox">
+            <h5>
+              To the sponsors of this project, three remarkable individuals driven by a shared passion for education
+              and growth, are the visionary sponsors behind the prizes and support that enrich our learning journey.
+            </h5>
+            <p>
+              <strong>Kennedy a.k.a Verified: </strong> With an unwavering commitment to fostering learning opportunities, Kennedy steps forward as a beacon of support. 
+              His dedication to cultivating excellence among our participants shines through the generous prizes he provides.
+              Kennedy's belief in the potential of every individual to rise to challenges and excel spurs us all to reach higher and achieve more.
+            </p>
+            <div class="abAbout">
+              <div class="img">
+                <img src="images\verified.jpg" alt="Id-A-22">
+              </div>
+              <div class="himher">
+                <h2>Kennedy</h2>
+                <p>Student</p>
+              </div>
+            </div>
+
+            <!-- <p>
+              <strong>Lemon: </strong>Lemon's zest for contributing to education takes center stage as a generous sponsor. 
+              Lemon's investment in our initiative supports not only the prizes but also the infrastructure that sustains our learning ecosystem. 
+              Their dedication to empowering minds resonates with every participant, underscoring the importance of nurturing growth through shared effort.
+            </p>
+            <div class="abAbout">
+              <div class="img">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSngDLxVdX-4fhpWyG8hDPxUWyGV1B9uOXJ3Q&usqp=CAU" alt="Id-A-22">
+              </div>
+              <div class="himher">
+                <h2>Lemon</h2>
+                <p>Student</p>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="last-cta">
+        <a href="quiz.html" class="cta-button">Start Quiz</a>
+      </div>
+      <div class="footer">
+        <p>&copy; 2023 I.T kids. All rights reserved.</p>
+        <p>Contact us at: contact@itkids.com</p>
+      </div>
+    </main>
+  </div>
+<script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

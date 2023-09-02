@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@600;700;800&family=Tilt+Prism&display=swap');
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: ; */
+}
+.loadingScreen{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+.d-flex {
+    width: 100%; 
+    height: 100vh; 
+    align-items: center;
+}
+.main-content{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #212529;
+}
+
+.formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-image: linear-gradient(60deg,#fc4a1a,#f7b733);
+    background-image: url("https://img.freepik.com/free-photo/flat-lay-clipboards-with-copy-space_23-2148219259.jpg");
+    background-position: center;    
+    background-blend-mode: screen;
+    background-size: cover;
+    background-color: rgb(33, 37, 41, 1);
+    overflow-y: hidden;
+}
+.formContainer form {
+    width: 340px;
+    background-color: #ffffff12;
+    box-shadow: inset -1px -1px 6px #ffffff94;
+}
+.fadi {
+    position: relative;
+}
+.viewpassword {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+.form-check{
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+}
+.feedback {
+    display: none;
+    width: 100%;
+    color: red !important;
+}
+
+.notAuser{
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    padding: 5rem 1.3rem 1rem;
+    overflow-y: hidden;
+    z-index: 10;
+    background-image: url("https://media.istockphoto.com/id/178485797/photo/close-up-of-face-with-tape-over-mouth-and-cross-drawn-on-it.jpg?s=612x612&w=0&k=20&c=XRQ2sH0e4UI4zRpvhI_P1gZqtQ92pUOenf5GIrAcPX8=");
+    background-color: rgba(33, 37, 41, 0.5);
+    background-position: center;
+    background-blend-mode: screen;
+    background-size: cover;
+}
+.notContent{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.rm-hwm{
+    display: none;
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important; 
+}
+.not-Info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 250px;
+    width: 100%;
+    color: aliceblue;
+    margin: 0 auto 3rem;
+}
+.tyoer{
+    position: relative;
+    padding: 2rem 0;
+    text-align: center;
+}
+.tyoer h1, .cursor{
+    color: rgba(240, 248, 255, 0.8);
+    display: inline;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.cursor{
+    animation: blink 0.5s infinite;
+    font-family: sans-serif;
+    opacity: 1;
+    color: #ffffff;
+}
+@keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+}
+.not-Info h4, .not-Info p, #sinform, .sucP, .sucH1, .sucImg{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease, transform 3s ease;
+}
+.sucB, #sucUl, #sucinP, #sucIn{
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 2s ease, transform 3s ease;
+}
+.sucP{
+    text-align: justify;
+    margin: 2rem auto;
+}
+.not-Info h4, .not-Info p{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.not-Info p{
+    color: #000000;
+    font-weight: 700;
+}
+.c-w100{
+    height: auto;
+    width: 100%;
+    position: relative;
+    background: inherit;
+}
+
+
+.aUser{
+    display: none;
+    background-color: inherit;
+    width: 100%;
+    min-height: 100%;
+    z-index: 15;
+  }
+  .sucH1{
+    font-family: Montserrat;
+    font-weight: 800;
+  }
+  .instructions{
+    font-size: 2.3rem;
+    margin-top: 1rem;
+  }
+.list-group-item{
+    margin-bottom: 2rem;
+}
