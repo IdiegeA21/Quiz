@@ -181,13 +181,15 @@ login.addEventListener("click", (e) => {
             if(pass.result){
                 report(username);
             }else {
-                signUp();
+                // signUp();
+                alert("You do not have an account with us");
             }
         }else if(!pass.result){
             if(student.result) {
                 report(password);
             }else{
-                signUp();
+                // signUp();
+                alert("You do not have an account with us");
             }
         }else{
             if(student.content.name === username.value && student.content.password === password.value){
