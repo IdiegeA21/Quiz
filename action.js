@@ -180,7 +180,7 @@ function submit(timeEnd){
   })
 }
 function showResult(){
-  window.location.replace("file:///C:/Users/Chipki/Documents/inah/Programming/My%20boss/result.html");
+  window.location.replace("/result.html");
 }
 ns.addEventListener("click", (e) => {
   e.preventDefault();
@@ -235,7 +235,7 @@ window.addEventListener("load", () => {
                 localStorage.setItem("visitedBefore", "true");
             } else {
                 console.log("You have already taken this quiz");
-              window.location.replace("file:///C:/Users/Chipki/Documents/inah/Programming/My%20boss/result.html");
+              window.location.replace("/result.html");
             }
         }
         })
