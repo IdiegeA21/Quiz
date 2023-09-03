@@ -186,7 +186,7 @@
     <script>
 
       function setTimerForSeptember2nd2023() {
-        // Target date and time: September 2, 2023, 22:00:00
+        // Target date and time: September 3, 2023, 19:10:00
         const targetDate = new Date('2023-09-03T19:10:00');
         const timer = document.getElementById("timer");
 
@@ -233,7 +233,7 @@
       userName.textContent = user.name;
       id.textContent = user.userID;
       announce.textContent = `${scoreDetails.score}%`;
-      endTime.textContent = `Time left: ${scoreDetails.time}`;
+      endTime.textContent = `Time left on the timer: ${scoreDetails.time}`;
       
       if (!localStorage.getItem("sent")) {
         console.log(false);
