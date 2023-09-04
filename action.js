@@ -1,5 +1,5 @@
 
-    const targetTime = new Date("2023-09-10T00:00:00"); // September 2, 2023, 23:59:00
+    const targetTime = new Date("2023-09-11T00:00:00"); // September 2, 2023, 23:59:00
     const currentTime = new Date();
     const targetDate = new Date('2023-09-01T23:35:00');// this is for testing
     const newTime = targetTime - currentTime;
